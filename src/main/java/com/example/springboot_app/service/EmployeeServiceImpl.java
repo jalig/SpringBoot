@@ -16,13 +16,19 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public List<Employee> getEmployees() { return employeeRepository.findAll(); }
+    public List<Employee> getEmployees() {
+        return employeeRepository.findAll();
+    }
 
     @Override
-    public Employee getEmployeeById(int id) { return employeeRepository.findById(id).get(); }
+    public Employee getEmployeeById(int id) {
+        return employeeRepository.findById(id).get();
+    }
 
     @Override
-    public void addEmployee(Employee employee) { employeeRepository.save(employee); }
+    public void addEmployee(Employee employee) {
+        employeeRepository.save(employee);
+    }
 
     @Override
     public void updateEmployee(Employee employee) {
@@ -30,5 +36,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public void deleteEmployee(int id) {  employeeRepository.deleteById(id); }
+    public void deleteEmployee(int id) {
+        employeeRepository.deleteById(id);
+    }
 }
